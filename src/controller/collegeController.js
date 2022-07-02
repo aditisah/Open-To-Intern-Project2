@@ -72,9 +72,6 @@ const createCollege = async function (req, res) {
     }
     filteredCollegeDetail.logoLink = logoLink.trim();
 
-    if (collegeDetails.isDeleted) {
-      filteredCollegeDetail.isDeleted = collegeDetails.isDeleted;
-    }
     //Checking if college already exist
     const findCollege = await collegeModel.findOne({
       name: filteredCollegeDetail.name,
