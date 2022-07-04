@@ -54,7 +54,7 @@ const createIntern = async function (req, res) {
       return res.status(400).send({
         status: false,
         message:
-          "Please enter valid name without digits and special characters",
+          "Please enter valid email without digits and special characters",
       });
     }
     filteredInternDetail.email = email.trim();

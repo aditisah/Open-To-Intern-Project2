@@ -95,14 +95,14 @@ const getCollegeWithInterns = async function (req, res) {
     if (Object.keys(collegeAbrv).length === 0 || !collegeAbrv.collegeName.trim()) {
       return res
         .status(400)
-        .send({ status: false, message: "Please select name" });
+        .send({ status: false, message: "Please select college name" });
     }
     if (!validName.test(collegeAbrv.collegeName.trim())) {
       return res
         .status(400)
         .send({
           status: false,
-          message: "Please select valid name,can't have spaces, digit and wild character inside name",
+          message: "Please select valid name,can't have spaces, digit and wild character inside college name",
         });
     }
     const validCollegeAbbrviation = collegeAbrv["collegeName"].trim().toLowerCase();
